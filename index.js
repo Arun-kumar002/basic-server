@@ -28,6 +28,9 @@ app.use(cors());
 // Routes
 app.use("/api/users", userRoutes);
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Welcome" })
+})
 
 app.listen(PORT, () =>
   console.log(`Server started at http://localhost:${PORT}`)
